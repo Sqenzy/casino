@@ -48,25 +48,8 @@
                     <li>cupcakes</li>
                 </ul>
             </nav>
-            <h1>Welcome to Rouelete</h1>
+            <h1>Welcome to Roulete</h1>
                     <h1>Enter Your Name</h1>
-                    <form id="nameForm">
-                        <input type="text" id="nameInput" placeholder="Your Name">
-                        <button type="button" onclick="submitName()">Submit</button>
-                    </form>
-                    <script>
-                        async function submitName() {
-                            const name = document.getElementById('nameInput').value;
-                            const response = await fetch('/api/example/save-name', {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ name })
-                            });
-                            const data = await response.json();
-                            alert(data.message);
-                            alert(name);
-                        }
-                    </script>
                 
             
             
