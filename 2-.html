@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #total {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function updateTotalDisplay() {
+            document.getElementById('total').textContent = `Součet: ${total}`;
+        }
+    </script>
+        <div id="total">BET =  0</div>
+    <div>
+        <button onclick="addNumber(1)">1</button>
+        <button onclick="addNumber(2)">2</button>
+        <button onclick="addNumber(5)">5</button>
+        <button onclick="addNumber(10)">10</button>
+        <button onclick="addNumber(50)">50</button>
+    </div>
+    <div>
+        <button onclick="resetTotal()" style="background-color: red; color: white;">Reset</button>
+    </div>
+
+    <script>
+        let total = 0;
+
+        function addNumber(number) {
+            total += number;
+            updateTotalDisplay();
+        }
+
+        function resetTotal() {
+            total = 0;
+            updateTotalDisplay();
+        }
+
+        function updateTotalDisplay() {
+            document.getElementById('total').textContent = `BET = ${total}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ROULETE</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            section.feature-box1 div
+            {
+                background-color: red;
+            }
+            section
+            {
+                color: black;
+            }
+            a
+            {
+                text-decoration: none;
+            }
+            header .logo a
+            {
+                background-image: url(images/2500-removebg-preview.png);
+                background-size: 300px;
+                background-repeat: no-repeat;
+                position: relative;
+                text-indent: -999999px;
+                display: inline-block;
+                top: 0px;
+                width: 300px;
+                height: 300px;
+            }
+            li:hover
+            {
+                background-color: red;
+                border-radius: 3px;
+            }
+            li.home
+            {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="home"><a href="index.html">HOME</a></li>
+                    <li>location</li>
+                    <li>cupcakes</li>
+                </ul>
+            </nav>
+            <h1>Welcome to Rouelete</h1>
+                    <h1>Enter Your Name</h1>
+                    <form id="nameForm">
+                        <input type="text" id="nameInput" placeholder="Your Name">
+                        <button type="button" onclick="submitName()">Submit</button>
+                    </form>
+                    <script>
+                        async function submitName() {
+                            const name = document.getElementById('nameInput').value;
+                            const response = await fetch('/api/example/save-name', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ name })
+                            });
+                            const data = await response.json();
+                            alert(data.message);
+                            alert(name);
+                        }
+                    </script>
+                
+            
+            
+        </header>
+        <section class="feature-box1">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </section>
+        <section class="feature-box2">
+            <div>g</div>
+            <div>f</div>
+        </section>
+        <footer>footer
+        </footer>
+    </body>
+</html>

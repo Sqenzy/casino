@@ -1,0 +1,50 @@
+body
+            {
+                background-color: rgb(230, 67, 67);
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+            header
+            {
+                background-color: black;
+                height: 200px;
+
+            }
+            a
+            {
+                text-decoration: none;
+            }
+            section
+            {
+                background-color: white;
+                color: gray;
+                padding: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+            div
+            {
+                background-color: red;
+                margin: auto;
+                width: 100px;
+                height: 20px;
+
+            }
+            ul
+            {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            li
+            {
+                display: inline-block;
+                margin: 20px;
+            }
+            footer
+            {
+                background-color: black;
+                padding: 10px 20px;
+            }
